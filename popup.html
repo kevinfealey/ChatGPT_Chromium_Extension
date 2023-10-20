@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatGPT Configuration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 300px;
+    }
+    button {
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <p>Select a model:</p>
+<select id="modelDropdown">
+  <option value="gpt-4">gpt-4</option>
+  <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+</select>
+  <p>Select or manage an API Key:</p>
+  <select id="apiKeysDropdown" style="width: 100%; margin-top: 10px;"></select>
+  <button id="addNewApiKey">Add New API Key</button>
+  <button id="renameApiKey">Rename API Key</button>
+  <button id="removeApiKey">Remove API Key</button>
+  <script src="popup.js"></script>
+</body>
+</html>

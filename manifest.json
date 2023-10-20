@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT-4 Interaction",
+  "version": "1.0",
+  "description": "Send selected content to ChatGPT-4",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "contextMenus", "storage", "tabs", "scripting"],
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contextPopup.js"]
+    }
+  ]
+}
